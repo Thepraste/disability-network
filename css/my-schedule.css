@@ -1,0 +1,17 @@
+ .my-schedule-page{width:min(1050px,calc(100% - 48px));min-height:570px;margin:0 auto;padding:28px 0 55px;color:#171923}
+.my-schedule-heading{display:flex;align-items:end;justify-content:space-between;padding:0 0 22px;border-bottom:1px solid #e7e8ed}
+.my-schedule-heading h1{margin:0;font-size:29px}.my-schedule-heading p:not(.calendar-eyebrow){margin:5px 0 0;color:#626a79;font-size:14px}
+.my-schedule-browse{color:#191d59;font-size:12px;font-weight:600;text-decoration:none}
+.schedule-tabs{display:flex;gap:22px;border-bottom:1px solid #e7e8ed;margin:20px 0}
+.schedule-tab{position:relative;padding:0 2px 12px;border:0;background:none;color:#646b79;font:500 13px Poppins,sans-serif;cursor:pointer}
+.schedule-tab.active{color:#191d59;font-weight:600}.schedule-tab.active:after{content:"";position:absolute;bottom:-1px;left:0;right:0;height:3px;background:#ff5100;border-radius:3px}
+.schedule-tab span{display:inline-grid;place-items:center;min-width:20px;height:20px;margin-left:5px;padding:0 5px;border-radius:20px;background:#eef0f7;font-size:10px}
+.my-booking-list{display:grid;gap:12px}.my-booking-card{display:grid;grid-template-columns:84px 112px minmax(0,1fr) auto;align-items:center;gap:16px;padding:14px;border:1px solid #e8eaf0;border-radius:12px;background:#fff;box-shadow:0 3px 12px rgba(24,30,65,.05)}
+.my-booking-date{display:grid;justify-items:center;color:#191d59;font-size:12px;font-weight:600}.my-booking-date strong{font-size:25px;line-height:1.1}.my-booking-date span{font-size:10px;color:#777f8d}
+.my-booking-card img{width:112px;height:78px;object-fit:cover;border-radius:8px}.my-booking-info h2{margin:0 0 6px;font-size:14px}.my-booking-info p{margin:3px 0;color:#687080;font-size:11px}.my-booking-info .booking-status{color:#267345;font-weight:600}
+.my-booking-action{padding:8px 13px;border:0;border-radius:7px;background:#ff5100;color:white;font:600 11px Poppins,sans-serif;text-decoration:none}
+.my-schedule-empty{min-height:400px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:35px 18px}
+.my-schedule-empty .empty-icon{width:88px;height:88px;display:grid;place-items:center;border-radius:50%;background:#e9eaf1;color:#191d59;font-size:38px}
+.my-schedule-empty h2{margin:22px 0 7px;font-size:19px}.my-schedule-empty p{max-width:440px;margin:0;color:#687080;font-size:14px;line-height:1.7}
+.my-schedule-empty a{margin-top:22px;padding:12px 24px;border-radius:8px;background:#191d59;color:#fff;text-decoration:none;font-size:13px;font-weight:600}
+@media(max-width:650px){.my-schedule-page{width:calc(100% - 28px);padding-top:22px}.my-schedule-heading{align-items:start;gap:10px}.my-schedule-heading h1{font-size:24px}.my-schedule-browse{font-size:10px;white-space:nowrap}.my-booking-card{grid-template-columns:52px 76px minmax(0,1fr);gap:9px;padding:10px}.my-booking-card img{width:76px;height:65px}.my-booking-date strong{font-size:21px}.my-booking-info h2{font-size:11px}.my-booking-info p{font-size:10px}.my-booking-action{grid-column:3;justify-self:start;padding:6px 10px}}

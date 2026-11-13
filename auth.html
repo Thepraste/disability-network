@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#191d59">
+  <title>Login or Join | Disability Network Wayne County Detroit</title>
+  <link rel="icon" href="assets/images/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+  <main class="auth-page">
+    <section class="auth-intro" aria-labelledby="introTitle">
+      <a class="auth-brand" href="index.html" aria-label="Disability Network home">
+        <img src="assets/images/disability-networtk-logo.png" alt="Disability Network Wayne County Detroit">
+      </a>
+      <p class="eyebrow">WELCOME TO DISABILITY NETWORK</p>
+      <h1 id="introTitle">Connect. Learn.<br><span>Live more independently.</span></h1>
+      <p class="intro-copy">Find helpful resources, discover opportunities and connect with a community that supports your goals.</p>
+      <ul class="benefit-list">
+        <li><span class="benefit-icon"><i class="fa-solid fa-laptop"></i></span><span>Discover learning and community opportunities</span></li>
+        <li><span class="benefit-icon"><i class="fa-solid fa-handshake-angle"></i></span><span>Explore services, resources and support</span></li>
+        <li><span class="benefit-icon"><i class="fa-solid fa-people-group"></i></span><span>Connect with people and programs near you</span></li>
+        <li><span class="benefit-icon"><i class="fa-solid fa-universal-access"></i></span><span>Access information at your own pace</span></li>
+      </ul>
+      <p class="intro-note">Your community. Your goals. Support along the way.</p>
+      <a class="back-home" href="index.html"><i class="fa-solid fa-arrow-left"></i> Back to homepage</a>
+    </section>
+
+    <section class="auth-panel" aria-label="Account access">
+      <div class="auth-tabs" role="tablist" aria-label="Choose account action">
+        <button class="auth-tab" id="loginTab" type="button" role="tab" aria-selected="true" aria-controls="loginPanel">Log in</button>
+        <button class="auth-tab" id="registerTab" type="button" role="tab" aria-selected="false" aria-controls="registerPanel">Join Now</button>
+      </div>
+
+      <section class="auth-view" id="loginPanel" role="tabpanel" aria-labelledby="loginTab">
+        <div class="choice-switch" role="group" aria-label="Login method">
+          <button type="button" class="choice-btn active" data-login-method="email" aria-pressed="true">Email</button>
+          <button type="button" class="choice-btn" data-login-method="phone" aria-pressed="false">Phone</button>
+        </div>
+        <form id="loginForm" novalidate>
+          <label class="field-label" id="loginIdentifierLabel" for="loginIdentifier">Email</label>
+          <input class="auth-input" id="loginIdentifier" name="identifier" type="email" autocomplete="email" placeholder="Enter your email address" required>
+          <p class="field-error" id="loginIdentifierError" aria-live="polite"></p>
+          <div class="login-secret" id="loginSecretWrap" hidden>
+            <label class="field-label" for="loginSecret" id="loginSecretLabel">Password</label>
+            <div class="password-wrap"><input class="auth-input" id="loginSecret" type="password" autocomplete="current-password" placeholder="Enter your password"><button class="password-toggle" type="button" data-toggle-password="loginSecret" aria-label="Show password"><i class="fa-regular fa-eye"></i></button></div>
+          </div>
+          <button class="submit-button" id="loginContinue" type="submit">Continue</button>
+          <p class="form-feedback" id="loginFeedback" role="status" aria-live="polite"></p>
+        </form>
+        <div class="login-help">Need help logging in?<br><span>Contact the Disability Network team for assistance.</span></div>
+        <p class="switch-prompt">New to Disability Network? <button type="button" class="text-action" data-open-register>Join Now</button></p>
+      </section>
+
+      <section class="auth-view" id="registerPanel" role="tabpanel" aria-labelledby="registerTab" hidden>
+        <form id="registerForm" novalidate>
+          <div class="two-fields">
+            <div><label class="field-label" for="firstName">First name</label><input class="auth-input" id="firstName" name="firstName" autocomplete="given-name" placeholder="First name" required></div>
+            <div><label class="field-label" for="lastName">Last name</label><input class="auth-input" id="lastName" name="lastName" autocomplete="family-name" placeholder="Last name" required></div>
+          </div>
+          <label class="field-label" for="registerEmail">Email address</label>
+          <input class="auth-input" id="registerEmail" name="email" type="email" autocomplete="email" placeholder="Enter your email address" required>
+          <p class="field-hint">We'll use this email for account updates and confirmations.</p>
+
+          <p class="method-question">How would you like to sign in?</p>
+          <div class="choice-switch register-method" role="group" aria-label="Preferred sign-in method">
+            <button type="button" class="choice-btn active" data-register-method="password" aria-pressed="true">Password</button>
+            <button type="button" class="choice-btn" data-register-method="phone" aria-pressed="false">Phone</button>
+          </div>
+          <div id="registerPasswordFields">
+            <label class="field-label" for="registerPassword">Create password</label>
+            <div class="password-wrap"><input class="auth-input" id="registerPassword" name="password" type="password" autocomplete="new-password" placeholder="Create a password" minlength="8"><button class="password-toggle" type="button" data-toggle-password="registerPassword" aria-label="Show password"><i class="fa-regular fa-eye"></i></button></div>
+            <label class="show-password"><input type="checkbox" id="showRegisterPassword"> Show password</label>
+            <p class="field-hint">Use at least 8 characters.</p>
+          </div>
+          <div id="registerPhoneFields" hidden>
+            <label class="field-label" for="registerPhone">Phone number</label>
+            <input class="auth-input" id="registerPhone" name="phone" type="tel" autocomplete="tel" placeholder="Enter your phone number">
+            <p class="field-hint">We'll use this number for sign-in verification.</p>
+          </div>
+
+          <p class="zip-explainer">Your ZIP code helps us connect you with nearby programs and services.</p>
+          <div class="two-fields location-fields">
+            <div><label class="field-label" for="zipCode">ZIP code</label><input class="auth-input" id="zipCode" name="zipCode" inputmode="numeric" autocomplete="postal-code" placeholder="e.g. 48201" maxlength="10" required></div>
+            <div><label class="field-label" for="birthYear">Birth year <span>(optional)</span></label><input class="auth-input" id="birthYear" name="birthYear" type="number" inputmode="numeric" placeholder="e.g. 1960" min="1900" max="2026"></div>
+          </div>
+          <label class="reminder-option"><input type="checkbox" id="emailReminders" checked><span><strong>Send me updates and class reminders by email</strong><small>You can change this preference later.</small></span></label>
+          <button class="submit-button" type="submit">Create my account</button>
+          <p class="form-feedback" id="registerFeedback" role="status" aria-live="polite"></p>
+        </form>
+        <p class="privacy-note">We respect your privacy. Read our <a href="contact.html">privacy information</a>.</p>
+        <p class="switch-prompt">Already have an account? <button type="button" class="text-action" data-open-login>Log in</button></p>
+      </section>
+    </section>
+  </main>
+  <script src="js/auth.js"></script>
+</body>
+</html>

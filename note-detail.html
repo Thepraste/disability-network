@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#191d59"><title>Class Notes | Disability Network Wayne County Detroit</title>
+<link rel="icon" href="assets/images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css"><link rel="stylesheet" href="css/my-class-notes.css">
+</head><body>
+<header class="site-header">
+
+  <!-- TOP NAVIGATION -->
+  <div class="top-nav">
+
+    <a href="index.html" class="brand">
+      <img
+        src="assets/images/disability-network-logo.png"
+        alt="Disability Network Wayne County Detroit"
+        class="brand-logo"
+      > <h1>Disability Network Wayne County Detroit</h1>
+    </a>
+
+    <div class="top-actions">
+<!--
+<ul class="utility-links">
+  <li><a href="#">News</a></li>
+  <li><a href="#">Help Center</a></li>
+</ul>
+--> 
+
+      <button class="mobile-menu-toggle" id="mobileMenuToggle" type="button"
+      aria-expanded="false" aria-controls="primaryNavigation" aria-label="Open navigation">
+      <i class="fa-solid fa-bars"></i>
+      <span>Menu</span>
+    </button>
+
+      <div class="auth-buttons" data-guest-actions>
+        <a href="auth.html#login" class="login-btn">Login</a>
+        <a href="auth.html#register" class="join-btn">Join Now</a>
+      </div>
+      <div class="account-menu" data-account-menu hidden>
+        <button class="account-trigger" type="button" aria-expanded="false" aria-controls="accountDropdown">
+          <span class="account-avatar" data-account-avatar>V</span>
+          <span class="account-name" data-account-name>Member</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="account-dropdown" id="accountDropdown" hidden>
+          <a href="my-class-notes.html" aria-current="page">My Class Notes</a>
+          <a href="my-schedule.html">My Schedule</a>
+          <a href="my-playlists.html">My Playlists</a>
+          <a href="settings.html"><i class="fa-regular fa-user"></i> Settings</a>
+          <button type="button" data-account-logout><i class="fa-solid fa-arrow-right-from-bracket"></i> Log out</button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- MAIN NAVIGATION -->
+  <div class="main-nav">
+
+    <nav class="navigation" id="primaryNavigation">
+
+      <div class="mobile-menu-tools">
+        <ul class="mobile-utility-links">
+          <li><a href="#">News</a></li>
+          <li><a href="#">Help Center</a></li>
+        </ul>
+        <div class="search-box mobile-search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="search" placeholder="Search for classes" aria-label="Search for classes">
+        </div>
+      </div>
+
+
+<ul class="nav-links">
+
+  <li><a href="index.html" class="nav-link">Home</a></li>
+
+  <!-- CLASSES -->
+  <li class="dropdown-wrapper">
+
+    <button type="button" id="classesToggle" aria-expanded="false" aria-controls="classesMenu" class="nav-link dropdown-toggle active">
+      Classes
+      <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+    </button>
+
+    <ul class="dropdown-menu classes-menu" id="classesMenu">
+
+      <li><a href="calendar.html">Calendar</a></li>
+
+      <li><a href="my-schedule.html">My Schedule</a></li>
+
+      <li><a href="medicaid-hub.html">Medicaid Hub</a></li>
+
+      <!-- TEMPORARILY HIDDEN -->
+      <!--
+      <li><a href="#">Videos</a></li>
+      <li><a href="#">Learning Library</a></li>
+      <li><a href="#">My Playlists</a></li>
+      -->
+
+    </ul>
+
+  </li>
+
+  <!-- TEMPORARILY HIDDEN -->
+  <!--
+  <li><a href="#" class="nav-link">Articles</a></li>
+  -->
+
+  <!-- SERIES -->
+  <li>
+    <a href="series.html" class="nav-link">Series</a>
+  </li>
+
+  <!-- GUIDES -->
+  <li>
+    <a href="guides.html" class="nav-link">Guides</a>
+  </li>
+
+  <!-- TEMPORARILY HIDDEN -->
+  <!--
+  <li><a href="#" class="nav-link">Community</a></li>
+  <li><a href="#" class="nav-link">Support Assistant</a></li>
+  -->
+
+  <!-- HELEN DIGITAL ASSISTANCE -->
+  <li>
+    <a href="index.html#helen" class="nav-link">
+      Helen Digital Assistance
+    </a>
+  </li>
+
+</ul>
+
+
+    </nav>
+
+    <!-- SEARCH -->
+    <div class="search-box">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input
+    type="search"
+    placeholder="Search for classes"
+    aria-label="Search for classes"
+  >
+</div>
+
+  </div>
+
+</header>
+<main class="notes-detail-page">
+ <a class="notes-exit" href="my-class-notes.html"><i class="fa-solid fa-arrow-left"></i> Exit</a>
+ <section class="notes-doc">
+  <span class="notes-pill">Class Notes</span>
+  <div class="notes-hero-image" style="height:270px;box-shadow:none"><div class="calendar-logo"><span>31</span></div></div>
+  <h1 id="detailTitle" style="font-size:19px;margin:12px 0 5px">How to Schedule Events With Google Calendar (15-min class)</h1>
+  <p id="detailInstructor">Wade Yarbrough</p>
+  <p class="note-meta"><span><i class="fa-regular fa-calendar"></i> Tue, Nov 10, 2026</span><span><i class="fa-regular fa-clock"></i> 10:00 AM - 10:13 AM</span><span><i class="fa-regular fa-file-lines"></i> 13 min</span></p>
+  <div class="note-actions"><button type="button" data-open-feedback class="outline"><i class="fa-regular fa-comment"></i> Give Feedback</button><a href="class-detail.html">View Class</a></div>
+ </section>
+ <article class="notes-doc" id="savedNoteDocument">
+  <h2>My Notes</h2>
+  <div id="savedNoteText" class="saved-note-text" aria-live="polite">
+   <p>Loading your saved class notes…</p>
+  </div>
+ </article>
+</main>
+<div class="feedback-backdrop" id="feedbackModal" role="dialog" aria-modal="true" aria-labelledby="feedbackTitle">
+ <div class="feedback-modal"><div class="feedback-head"><h2 id="feedbackTitle">Class feedback</h2><button class="feedback-close" type="button" data-close-feedback aria-label="Close">&times;</button></div>
+ <form class="feedback-body" id="feedbackForm"><div class="feedback-class"><strong id="feedbackClassTitle">Class title</strong><span id="feedbackGuideName">By instructor</span></div>
+ <div class="feedback-rating-grid">
+  <div class="rating-field"><label>Rate your session</label><p>How was your class? Tell us how you feel?</p><div class="stars" data-rating="session"></div><textarea name="sessionComment" placeholder="Type your comment"></textarea></div>
+  <div class="rating-field"><label>Rate your guide</label><p>How was your guide? Tell us how you feel?</p><div class="stars" data-rating="guide"></div><textarea name="guideComment" placeholder="Type your comment"></textarea></div>
+ </div><label for="generalFeedback"><strong>Tell us how we could improve. What else do you want to learn?</strong></label><textarea id="generalFeedback" name="generalFeedback" placeholder="Write your feedback over here"></textarea>
+ <button class="feedback-submit" type="submit">Submit feedback</button><p class="feedback-status" id="feedbackStatus" aria-live="polite"></p></form></div></div>
+<footer class="site-footer" id="contact">
+  <div class="footer-main">
+    <a class="footer-brand" href="#" aria-label="Disability Network Wayne County Detroit home">
+      <img src="assets/images/disability-network-logo.png" alt="Disability Network Wayne County Detroit">
+    </a>
+
+    <nav class="footer-navigation" aria-label="Footer navigation">
+      <a href="#classes">Explore Classes</a>
+      <a href="#organization-intro">About Us</a>
+      <a href="mailto:info@disabilitynetwork.org?subject=Get%20Involved">Get Involved</a>
+      <a href="#helen-assistant">Help Center</a>
+      <a href="#events">News &amp; Updates</a>
+      <a href="mailto:info@disabilitynetwork.org?subject=Partnership%20Enquiry">Partner With Us</a>
+    </nav>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="footer-legal">
+      <a href="mailto:info@disabilitynetwork.org?subject=Privacy%20Policy%20Enquiry">Privacy Policy</a>
+      <span aria-hidden="true">·</span>
+      <a href="mailto:info@disabilitynetwork.org?subject=Terms%20of%20Service%20Enquiry">Terms of Service</a>
+    </div>
+    <p>© 2026 Disability Network Wayne County Detroit. All rights reserved.</p>
+  </div>
+</footer>
+<script src="js/navigation.js" defer></script><script src="js/account-menu.js" defer></script>
+<script src="js/note-detail.js" defer></script>
+<script src="js/animation.js" defer></script></body></html>

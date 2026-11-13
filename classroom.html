@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#191d59"><title>Classroom | Disability Network Wayne County Detroit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="css/classroom.css"></head>
+<body class="dn-live-room">
+<main class="room-layout">
+<section class="video-column">
+ <div class="video-toolbar"><a href="class-detail.html" id="exitRoom" class="exit-room"><i class="fa-solid fa-arrow-left"></i> Exit</a><span id="playbackBadge" class="playback-badge">REPLAY</span><button type="button" id="expandSide" class="expand-side" aria-label="Collapse side panel"><i class="fa-solid fa-chevron-right"></i></button></div>
+ <div class="video-wrap" id="videoWrap">
+  <video id="classVideo" controls playsinline preload="metadata" poster="" aria-label="Class video"></video>
+  <div id="videoEmpty" class="video-empty"><div class="empty-play"><i class="fa-solid fa-play"></i></div><h1 id="videoTitle">Your class video will appear here</h1><p id="videoMessage">The class video link has not been added yet. Please check back when the recording or live stream is available.</p><span class="video-type-note" id="videoTypeNote">Video player supports HLS streams and MP4 recordings</span></div>
+  <div class="video-load-error" id="videoError" hidden>We couldn't load this video. Please check the stream link or try again later.</div>
+ </div>
+ <div class="video-bottom"><div><strong id="roomClassName">Classroom</strong><span id="roomGuideName">Disability Network Guide</span></div><span id="roomModeStatus" class="mode-status">Recording</span></div>
+</section>
+<aside class="learning-panel" id="learningPanel">
+ <button type="button" class="notes-header" id="classNotesToggle" aria-pressed="false"><i class="fa-regular fa-file-lines"></i><strong>Class notes</strong><span>Instructor notes</span></button>
+ <div class="panel-tools"><button type="button" class="panel-icon" id="panelExpand" aria-label="Expand panel"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button><button type="button" class="panel-icon" id="panelCollapse" aria-label="Collapse panel"><i class="fa-solid fa-table-columns"></i></button><button type="button" class="panel-icon" id="closePanel" aria-label="Close panel"><i class="fa-solid fa-xmark"></i></button>
+  <nav class="side-tabs" aria-label="Learning panel"><button class="side-tab active" data-panel="chat"><i class="fa-regular fa-comment"></i> Chat</button><button class="side-tab" data-panel="info"><i class="fa-regular fa-circle-info"></i> Info</button><button class="side-tab" data-panel="explore"><i class="fa-regular fa-compass"></i> Explore</button></nav>
+ </div>
+ <div class="panel-content">
+  <section class="panel-view tutor-notes-view" id="panel-notes">
+   <div class="tutor-notes-content">
+    <div class="tutor-notes-status"><i class="fa-regular fa-file-lines"></i><span>Notes provided by your instructor</span></div>
+    <h2 id="tutorNotesTitle">Class notes</h2>
+    <div id="tutorNotesBody" class="tutor-notes-body"><p>Your instructor's notes for this class will appear here.</p></div>
+   </div>
+  </section>
+  <section class="panel-view active" id="panel-chat">
+   <div class="chat-status"><span class="connected-dot"></span><span id="chatConnectionText">Class chat preview</span></div>
+   <div class="chat-mode-switch"><button class="chat-mode active" data-chat-mode="class">Class chat</button><button class="chat-mode" data-chat-mode="helen">Ask Helen</button></div>
+   <div class="chat-mode-view active" id="classChatView">
+    <div class="welcome-message"><div class="guide-avatar" id="chatGuideInitials">DN</div><div><strong id="chatGuideName">Your Guide</strong><p>Welcome! Use this space to share questions and thoughts with your class. Live messaging will be available when the chat service is connected.</p></div></div>
+    <div class="chat-messages" id="chatMessages"><p class="chat-placeholder">Class messages will appear here when the live chat is connected.</p></div>
+    <form class="message-form" id="classChatForm"><input id="classChatInput" type="text" maxlength="500" placeholder="Type a message…" aria-label="Class chat message"><button type="submit" aria-label="Send class message"><i class="fa-regular fa-paper-plane"></i></button></form>
+    <p class="privacy-note">Please do not share personal or sensitive information in public comments.</p>
+   </div>
+   <div class="chat-mode-view" id="helenView">
+    <div class="welcome-message helen-welcome"><div class="guide-avatar helen-avatar">H</div><div><strong>Helen Digital Assistant</strong><p>Ask questions about the class or request help understanding a topic. Helen's live AI connection can be enabled when the assistant service is configured.</p></div></div>
+    <div class="helen-suggestions"><button type="button">Can you explain today's topic?</button><button type="button">What should I remember from this class?</button></div>
+    <form class="message-form" id="helenForm"><input id="helenInput" type="text" maxlength="500" placeholder="Ask Helen a question…" aria-label="Ask Helen"><button type="submit" aria-label="Send question"><i class="fa-regular fa-paper-plane"></i></button></form>
+    <p class="privacy-note">Helen's live response service is not connected yet.</p>
+   </div>
+  </section>
+  <section class="panel-view" id="panel-info">
+   <div class="info-content"><p class="panel-eyebrow">ABOUT THIS CLASS</p><h2 id="infoTitle">Class information</h2><div class="info-guide"><div class="guide-avatar" id="infoGuideInitials">DN</div><div><strong id="infoGuideName">Your Guide</strong><span>Class instructor</span></div></div><p id="infoDescription">Class details will appear here.</p><div class="info-facts"><div><i class="fa-regular fa-clock"></i><span id="infoDuration">Class session</span></div><div><i class="fa-solid fa-signal"></i><span id="infoCategory">Learning</span></div></div><a href="class-detail.html" id="fullDetailsLink" class="panel-link">View full class details <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+  </section>
+  <section class="panel-view" id="panel-explore">
+   <div class="info-content"><p class="panel-eyebrow">KEEP LEARNING</p><h2>Explore more</h2><p>Continue building your skills with Disability Network learning resources.</p><a href="index.html#classes" class="explore-link"><i class="fa-solid fa-book-open"></i><span><strong>Explore classes</strong><small>Discover more live and recorded classes</small></span><i class="fa-solid fa-chevron-right"></i></a><a href="guides.html" class="explore-link"><i class="fa-solid fa-user-group"></i><span><strong>Meet our Guides</strong><small>Get to know the people leading sessions</small></span><i class="fa-solid fa-chevron-right"></i></a><a href="my-class-notes.html" class="explore-link"><i class="fa-regular fa-note-sticky"></i><span><strong>My Class Notes</strong><small>Review notes from your learning</small></span><i class="fa-solid fa-chevron-right"></i></a></div>
+  </section>
+ </div>
+</aside>
+<button type="button" id="reopenPanel" class="reopen-panel" hidden aria-label="Open learning panel"><i class="fa-solid fa-chevron-left"></i></button>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@1.5.17/dist/hls.min.js"></script><script type="module" src="js/classroom.js"></script>
+</body></html>
