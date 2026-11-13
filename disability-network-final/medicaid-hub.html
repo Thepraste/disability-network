@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#191d59">
+<title>Medicaid Hub | Disability Network Wayne County Detroit</title>
+<link rel="icon" href="assets/images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css"><link rel="stylesheet" href="css/medicaid-hub.css">
+</head><body>
+<header class="site-header">
+
+  <!-- TOP NAVIGATION -->
+  <div class="top-nav">
+
+    <a href="#" class="brand">
+      <img
+        src="assets/images/disability-network-logo.png"
+        alt="Disability Network Wayne County Detroit"
+        class="brand-logo"
+      > <h1>Disability Network Wayne County Detroit</h1>
+    </a>
+
+    <div class="top-actions">
+<!--
+<ul class="utility-links">
+  <li><a href="#">News</a></li>
+  <li><a href="#">Help Center</a></li>
+</ul>
+--> 
+
+      <button class="mobile-menu-toggle" id="mobileMenuToggle" type="button"
+      aria-expanded="false" aria-controls="primaryNavigation" aria-label="Open navigation">
+      <i class="fa-solid fa-bars"></i>
+      <span>Menu</span>
+    </button>
+
+      <div class="auth-buttons" data-guest-actions>
+        <a href="auth.html#login" class="login-btn">Login</a>
+        <a href="auth.html#register" class="join-btn">Join Now</a>
+      </div>
+      <div class="account-menu" data-account-menu hidden>
+        <button class="account-trigger" type="button" aria-expanded="false" aria-controls="accountDropdown">
+          <span class="account-avatar" data-account-avatar>V</span>
+          <span class="account-name" data-account-name>Member</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="account-dropdown" id="accountDropdown" hidden>
+          <a href="my-class-notes.html">My Class Notes</a>
+          <a href="my-schedule.html">My Schedule</a>
+          <a href="my-playlists.html">My Playlists</a>
+          <a href="settings.html"><i class="fa-regular fa-user"></i> Settings</a>
+          <button type="button" data-account-logout><i class="fa-solid fa-arrow-right-from-bracket"></i> Log out</button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- MAIN NAVIGATION -->
+  <div class="main-nav">
+
+    <nav class="navigation" id="primaryNavigation">
+
+      <div class="mobile-menu-tools">
+        <ul class="mobile-utility-links">
+          <li><a href="#">News</a></li>
+          <li><a href="#">Help Center</a></li>
+        </ul>
+        <div class="search-box mobile-search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="search" placeholder="Search for classes" aria-label="Search for classes">
+        </div>
+      </div>
+
+
+<ul class="nav-links">
+
+  <li><a href="index.html" class="nav-link">Home</a></li>
+
+  <!-- CLASSES -->
+  <li class="dropdown-wrapper">
+
+    <button type="button" id="classesToggle" aria-expanded="false" aria-controls="classesMenu" class="nav-link dropdown-toggle active">
+      Classes
+      <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+    </button>
+
+    <ul class="dropdown-menu classes-menu" id="classesMenu">
+
+      <li><a href="calendar.html">Calendar</a></li>
+
+      <li><a href="my-schedule.html">My Schedule</a></li>
+
+      <li><a href="medicaid-hub.html" aria-current="page">Medicaid Hub</a></li>
+
+      <!-- TEMPORARILY HIDDEN -->
+      <!--
+      <li><a href="#">Videos</a></li>
+      <li><a href="#">Learning Library</a></li>
+      <li><a href="#">My Playlists</a></li>
+      -->
+
+    </ul>
+
+  </li>
+
+  <!-- TEMPORARILY HIDDEN -->
+  <!--
+  <li><a href="#" class="nav-link">Articles</a></li>
+  -->
+
+  <!-- SERIES -->
+  <li>
+    <a href="series.html" class="nav-link">Series</a>
+  </li>
+
+  <!-- GUIDES -->
+  <li>
+    <a href="guides.html" class="nav-link">Guides</a>
+  </li>
+
+  <!-- TEMPORARILY HIDDEN -->
+  <!--
+  <li><a href="#" class="nav-link">Community</a></li>
+  <li><a href="#" class="nav-link">Support Assistant</a></li>
+  -->
+
+  <!-- HELEN DIGITAL ASSISTANCE -->
+  <li>
+    <a href="helen.html" class="nav-link">
+      Helen Digital Assistance
+    </a>
+  </li>
+
+</ul>
+
+
+    </nav>
+
+    <!-- SEARCH -->
+    <div class="search-box">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input
+    type="search"
+    placeholder="Search for classes"
+    aria-label="Search for classes"
+  >
+</div>
+
+  </div>
+
+</header>
+<main class="medicaid-hub">
+<section class="medicaid-feature-slider" aria-label="Featured Medicaid learning videos">
+ <div class="medicaid-slider-track" id="medicaidSliderTrack">
+  <article class="medicaid-slide active" data-slide="0">
+   <img src="assets/images/community-2.jpg" alt="Disability Network educator presenting Medicaid information">
+   <div class="medicaid-slide-shade"></div>
+   <div class="medicaid-slide-copy"><span>FEATURED VIDEO · MEDICAID BASICS</span><h1>What to know about Medicaid and disability support</h1><p>Start with the essentials and learn where to find trusted guidance.</p><button type="button" data-open-resource="featured"> <i class="fa-solid fa-play"></i> Watch video</button></div>
+  </article>
+  <article class="medicaid-slide" data-slide="1">
+   <img src="assets/images/community-1.jpg" alt="Community member learning about health coverage">
+   <div class="medicaid-slide-shade"></div>
+   <div class="medicaid-slide-copy"><span>LEARN THE BASICS</span><h1>Understanding eligibility and enrollment</h1><p>Explore the steps and information that may help you get started.</p><button type="button" data-open-resource="eligibility"><i class="fa-solid fa-play"></i> Watch video</button></div>
+  </article>
+  <article class="medicaid-slide" data-slide="2">
+   <img src="assets/images/community-3.jpg" alt="Disability Network community member">
+   <div class="medicaid-slide-shade"></div>
+   <div class="medicaid-slide-copy"><span>COMMUNITY SUPPORT</span><h1>Finding services that support independent living</h1><p>Learn about home and community-based services and support options.</p><button type="button" data-open-resource="services"><i class="fa-solid fa-play"></i> Watch video</button></div>
+  </article>
+ </div>
+ <button class="medicaid-slide-arrow prev" type="button" aria-label="Previous featured video"><i class="fa-solid fa-chevron-left"></i></button>
+ <button class="medicaid-slide-arrow next" type="button" aria-label="Next featured video"><i class="fa-solid fa-chevron-right"></i></button>
+ <div class="medicaid-slide-dots" aria-label="Choose featured video">
+  <button class="active" type="button" data-slide-to="0" aria-label="Show featured video 1"></button>
+  <button type="button" data-slide-to="1" aria-label="Show featured video 2"></button>
+  <button type="button" data-slide-to="2" aria-label="Show featured video 3"></button>
+ </div>
+</section>
+<section class="hub-topic-section"><div class="hub-section-heading"><div><span class="hub-eyebrow">FIND WHAT YOU NEED</span><h2>Explore Medicaid topics</h2><p>Choose a topic to jump to helpful information.</p></div></div><div class="hub-topic-pills" id="hubTopicPills"></div></section>
+<section class="hub-series-section"><div class="hub-section-heading"><div><span class="hub-eyebrow">LEARN STEP BY STEP</span><h2>Featured learning series</h2><p>Start with the basics, then explore the topics that matter to you.</p></div></div>
+<div class="hub-series-card"><img src="assets/images/community-1.jpg" alt="Community member learning"><div><span class="hub-tag">START HERE</span><h3>Medicaid Essentials</h3><p>A beginner-friendly collection covering Medicaid basics, applications, renewals and understanding your coverage.</p><a href="#medicaid-library">Explore the series <i class="fa-solid fa-arrow-right"></i></a></div></div></section>
+<section class="hub-library-section" id="medicaid-library"><div class="hub-section-heading"><div><span class="hub-eyebrow">RESOURCE LIBRARY</span><h2>Explore the Medicaid library</h2><p>Browse short educational resources by subject.</p></div><label class="hub-search"><i class="fa-solid fa-magnifying-glass"></i><input id="hubSearch" type="search" placeholder="Search Medicaid topics..." aria-label="Search Medicaid resources"></label></div>
+<div id="hubSections"></div>
+</section>
+<section class="hub-disclaimer"><i class="fa-solid fa-circle-info"></i><div><strong>Information, not individual benefits advice</strong><p>This hub is for general education. Medicaid eligibility, benefits and program rules can depend on individual circumstances and may change. For decisions about your coverage, contact your Medicaid health plan or an appropriate benefits assistance resource.</p></div></section>
+</main>
+<footer class="site-footer" id="contact">
+  <div class="footer-main">
+    <a class="footer-brand" href="#" aria-label="Disability Network Wayne County Detroit home">
+      <img src="assets/images/disability-network-logo.png" alt="Disability Network Wayne County Detroit">
+    </a>
+
+    <nav class="footer-navigation" aria-label="Footer navigation">
+      <a href="#classes">Explore Classes</a>
+      <a href="#organization-intro">About Us</a>
+      <a href="mailto:info@disabilitynetwork.org?subject=Get%20Involved">Get Involved</a>
+      <a href="#helen-assistant">Help Center</a>
+      <a href="#events">News &amp; Updates</a>
+      <a href="mailto:info@disabilitynetwork.org?subject=Partnership%20Enquiry">Partner With Us</a>
+    </nav>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="footer-legal">
+      <a href="mailto:info@disabilitynetwork.org?subject=Privacy%20Policy%20Enquiry">Privacy Policy</a>
+      <span aria-hidden="true">·</span>
+      <a href="mailto:info@disabilitynetwork.org?subject=Terms%20of%20Service%20Enquiry">Terms of Service</a>
+    </div>
+    <p>© 2026 Disability Network Wayne County Detroit. All rights reserved.</p>
+  </div>
+</footer>
+<div class="hub-modal" id="resourceModal" hidden role="dialog" aria-modal="true" aria-labelledby="resourceModalTitle"><div class="hub-modal-panel"><button class="hub-modal-close" type="button" aria-label="Close"><i class="fa-solid fa-xmark"></i></button><span class="hub-eyebrow">DISABILITY NETWORK LEARNING RESOURCE</span><h2 id="resourceModalTitle">Resource information</h2><p id="resourceModalText"></p><p class="hub-modal-note">Additional videos, transcripts and related learning materials will be available here.</p><button type="button" class="hub-primary-btn" data-close-resource>Got it</button></div></div>
+<script src="js/navigation.js" defer></script>
+<script type="module" src="js/medicaid-hub.js"></script><script src="js/account-menu.js" defer></script>
+<script src="js/animation.js" defer></script>
+<script src="js/animation.js" defer></script></body></html>

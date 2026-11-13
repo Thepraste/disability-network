@@ -1,0 +1,99 @@
+/* Subtle, accessible motion across the Disability Network experience. */
+:root { --dn-motion-fast: 180ms; --dn-motion-medium: 280ms; }
+
+/* Interactive surfaces feel responsive without jumping around. */
+.class-card,
+.schedule-card,
+.series-card,
+.guide-card,
+.featured-series-card,
+.my-learning-card,
+.class-detail-card,
+.medicaid-resource-card,
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.class-card,
+.schedule-card,
+.series-card,
+.guide-card,
+.featured-series-card,
+.my-learning-card,
+.class-detail-card,
+.medicaid-resource-card {
+  transition: transform var(--dn-motion-medium) ease, box-shadow var(--dn-motion-medium) ease, border-color var(--dn-motion-medium) ease;
+}
+
+.class-card:hover,
+.schedule-card:hover,
+.series-card:hover,
+.guide-card:hover,
+.featured-series-card:hover,
+.my-learning-card:hover,
+.class-detail-card:hover,
+.medicaid-resource-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(25, 29, 89, .09);
+}
+
+.class-card img,
+.schedule-card img,
+.series-card img,
+.featured-series-card img,
+.guide-card img {
+  transition: transform 420ms cubic-bezier(.2,.7,.2,1);
+}
+
+.class-card:hover img,
+.schedule-card:hover img,
+.series-card:hover img,
+.featured-series-card:hover img,
+.guide-card:hover img {
+  transform: scale(1.035);
+}
+
+button, .class-book-btn, .schedule-book-btn, .class-primary-action, .class-outline-action,
+.carousel-arrow, .learning-category-btn, .nav-link, .join-btn, .login-btn {
+  transition: color var(--dn-motion-fast) ease, background-color var(--dn-motion-fast) ease,
+    border-color var(--dn-motion-fast) ease, box-shadow var(--dn-motion-fast) ease,
+    transform var(--dn-motion-fast) ease;
+}
+
+button:active:not(:disabled), .class-book-btn:active:not(:disabled),
+.schedule-book-btn:active:not(:disabled), .class-primary-action:active {
+  transform: scale(.97);
+}
+
+/* Scroll reveals are only enabled by JS, so content remains visible if JS is unavailable. */
+.dn-reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 520ms ease, transform 520ms cubic-bezier(.2,.7,.2,1);
+  transition-delay: var(--dn-reveal-delay, 0ms);
+}
+.dn-reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+.dn-reveal.dn-reveal-left { transform: translateX(-18px); }
+.dn-reveal.dn-reveal-left.is-visible { transform: translateX(0); }
+
+.dn-reveal.dn-reveal-right { transform: translateX(18px); }
+.dn-reveal.dn-reveal-right.is-visible { transform: translateX(0); }
+
+:focus-visible {
+  outline: 3px solid rgba(255, 81, 0, .48);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+  .dn-reveal, .dn-reveal.dn-reveal-left, .dn-reveal.dn-reveal-right {
+    opacity: 1; transform: none;
+  }
+}
